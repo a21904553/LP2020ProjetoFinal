@@ -178,7 +178,7 @@ Alternativamente, pode ser executado da seguinte forma:
 ```bash
 $>./fabrica
 ```
-Neste caso os ficheiros terão de ser carregados através das opções 5 e 6 do menú antes de se iniciar a produção. Caso a produção seja iniciada sem carregar ficheiros deverá ser mostrada a mensagem apresentada para este caso na seção Avisos e Tratamento de Erros. De seguida, um menu deve ser apresentado tal como se ilustra em baixo.
+Neste caso os ficheiros terão de ser carregados através das opções 6 e 7 do menú antes de se iniciar a produção. Caso a produção seja iniciada sem carregar ficheiros deverá ser mostrada a mensagem apresentada para este caso na seção Avisos e Tratamento de Erros. De seguida, um menu deve ser apresentado tal como se ilustra em baixo.
 ```C
 printf("**********Autolusofona***********");
 printf("1. Iniciar produção");
@@ -218,11 +218,11 @@ Caso tenha sido corrido o programa sem existir inventário (o programa foi execu
 
 Ao receber uma instrução para apresentar a lista de pedidos satisfeitos, deverão ser apresentados os números dos pedidos assim como as peças que foram encontradas para o carro em análise. Os dados deverão ser apresentados no ecrã no mesmo formato do ficheiro de saída correspondente. Caso ainda não tenha sido iniciada a produção, dará um aviso.
 
-### 2.3.3 Mostrar Pedidos Insatisfeitos
+### 2.3.4 Mostrar Pedidos Insatisfeitos
 
 Ao receber uma instrução para apresentar a lista de pedidos insatisfeitos, deverão ser apresentados os números dos pedidos assim como as peças que no instante em que o carro ia ser avaliado não foram encontradas para o carro em análise.  Os dados deverão ser apresentados no ecrã no mesmo formato do ficheiro de saída correspondente. Caso ainda não tenha sido iniciada a produção, dará um aviso.
 
-### 2.3.4 Escrever Ficheiros Atualizados
+### 2.3.5 Escrever Ficheiros Atualizados
 
 Escrever ficheiros de output. Todos os ficheiros terão o mesmo nome dos ficheiros de entrada, mas com o sufixo `_out`, sendo o seu tipo diferenciado pela extensão:
 *   Inventário Atualizado - com extensão `.inventario` (sem acento :))
@@ -231,7 +231,7 @@ Escrever ficheiros de output. Todos os ficheiros terão o mesmo nome dos ficheir
 
 Por exemplo, se o ficheiro de entrada tiver como nome “caso1” então os ficheiros de saída serão: `caso1_out.inventario`, `caso1_out.produzidos`, `caso1_out.naoproduzidos`.
 
-### 2.3.5 Ler Ficheiro de Inventário
+### 2.3.6 Ler Ficheiro de Inventário
 
 Ao usar esta opção, o utilizador deverá especificar o nome de um ficheiro do tipo “inventario” com dados de novas peças a ser adicionadas à correspondente estrutura de dados. Deverá ser apresentada uma mensagem a pedir o nome do ficheiro de inventário:
 ```
@@ -239,15 +239,15 @@ Introduza o nome do ficheiro de inventario:
 ```
 Tal como na introdução dos ficheiros através do argumento do programa também, aqui é apenas necessário especificar apenas o nome do ficheiro sem a extensão, sendo esta adicionada de forma automática.
 
-### 2.3.6 Ler Ficheiro de Pedidos
+### 2.3.7 Ler Ficheiro de Pedidos
 
-Ao usar esta opção, o utilizador deverá especificar o nome de um ficheiro do tipo “pedidos” com dados de novos pedidos a ser adicionados à correspondente estrutura de dados. Deverá ser apresentada uma mensagem a pedir o nome do ficheiro de inventário:
+Ao usar esta opção, o utilizador deverá especificar o nome de um ficheiro do tipo “pedidos” com dados de novos pedidos a ser adicionados à correspondente estrutura de dados. Deverá ser apresentada uma mensagem a pedir o nome do ficheiro de pedidos:
 ```
 Introduza o nome do ficheiro de pedidos: 
 ```
 O utilizador irá introduzir o nome do ficheiro que quer utilizar sem a extensão, devendo esta ser automaticamente adicionada.
 
-### 2.3.7 Sair
+### 2.3.8 Sair
 
 Esta opção deverá fazer com que o programa termine sem crashar ou vazar memória.
 
@@ -302,7 +302,7 @@ Em resumo a definição das mensagens de erro é:
 #define ERR_FOPEN "Error: could not open file."
 #define ERR_CORPT "Error: File is corrupted."
 #define ERR_ARGS "Error: Invalid argument."
-#define ERR_ARGS "Error: Couldn't allocate memory."
+#define ERR_MEM "Error: Couldn't allocate memory."
 #define WARN_NO_PRODUCTION_INIT "Warning: No production done initiated yet."
 #define ERR_NO_FILES "No files were specified"
 ```
