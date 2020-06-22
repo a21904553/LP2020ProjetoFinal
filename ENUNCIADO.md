@@ -342,7 +342,7 @@ Alunos que não submetam a sua avaliação dos relatórios do colegas, não ter�
 
 ## Peso na avaliação
 
-O projecto vale 35% da nota final e será cotado de 0 a 20 valores. A avaliação do mesmo será feita da seguinte forma:
+O projecto vale 35% da nota final e será cotado de 0 a 20 valores. O projeto tem uma nota mínima de 8 valores para aprovação à UC. A avaliação do mesmo será feita da seguinte forma:
 
 * 17  valores - Código (funcionalidade, indentação, comentários) - A classificação do Pandora servirá apenas de referência.
 * 3 valores - Relatório.
