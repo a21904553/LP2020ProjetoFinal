@@ -159,10 +159,13 @@ Os atributos de cada peça devem ser separados de vírgulas. Caso um atributo n�
 
 Exemplo de conteúdo de um ficheiro de pedidos:
 ```
-<NumeroDePedido>;<Cilindrada>,<TipoCombustivel>;<Cor>,<Modelo>;<Diametro>,<Largura>,<Cor>;<Diametro>,<Largura>,<Altura>;
 A422TCRE234VD3KJ349D;2000,;Vermelho,;17,200,Platinum;17,200,45;
 3KJ349DA422TCRE234VD;,diesel;Azul,Minivan;17,200,45;
 DA422TC3KJ349RE234VD;,;Vermelho,;,,;,,;
+```
+onde cada linha se encontra dividida de acordo com:
+```
+<NumeroDePedido>;<Cilindrada>,<TipoCombustivel>;<Cor>,<Modelo>;<Diametro>,<Largura>,<Cor>;<Diametro>,<Largura>,<Altura>;
 ```
 
 
@@ -180,16 +183,16 @@ $>./fabrica
 ```
 Neste caso os ficheiros terão de ser carregados através das opções 6 e 7 do menú antes de se iniciar a produção. Caso a produção seja iniciada sem carregar ficheiros deverá ser mostrada a mensagem apresentada para este caso na seção Avisos e Tratamento de Erros. De seguida, um menu deve ser apresentado tal como se ilustra em baixo.
 ```C
-printf("**********Autolusofona***********");
-printf("1. Iniciar produção");
-printf("2. Mostrar inventário atual");
-printf("3. Mostrar pedidos satisfeitos");
-printf("4. Mostrar pedidos insatisfeitos");
-printf("5. Escrever ficheiros atualizados");
-printf("6. Ler ficheiro de inventário");
-printf("7. Ler ficheiro de pedidos");
-printf("8. Sair");
-printf("*********************************");
+printf("**********Autolusofona***********\n");
+printf("1. Iniciar producao\n");
+printf("2. Mostrar inventario atual\n");
+printf("3. Mostrar pedidos satisfeitos\n");
+printf("4. Mostrar pedidos insatisfeitos\n");
+printf("5. Escrever ficheiros atualizados\n");
+printf("6. Ler ficheiro de inventario\n");
+printf("7. Ler ficheiro de pedidos\n");
+printf("8. Sair\n");
+printf("*********************************\n");
 ```
 Detalham-se em seguida as opções do menú.
 
