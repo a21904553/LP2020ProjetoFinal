@@ -47,14 +47,14 @@ O inventário guarda os dados de quais as peças disponíveis para serem usadas 
     *   Modelo - string com no máximo 127 caracteres
 *   Jantes
     *   Número de Série - Conjunto de 20 caracteres alfanuméricos
-    *   Diâmetro - Valor decimal do diâmetro da jante
-    *   Largura - Valor decimal da largura da jante
+    *   Diâmetro - Valor inteiro do diâmetro da jante
+    *   Largura - Valor inteiro da largura da jante
     *   Cor - Enumerado os seguintes valores: Vermelho, Verde, Azul, Amarelo, Preto, Branco, Cinzento
 *   Pneus
     *   Número de Série - Conjunto de 20 caracteres alfanuméricos
-    *   Diâmetro - Valor decimal do diâmetro do pneu
-    *   Largura - Valor decimal do diâmetro do pneu
-    *   Altura - Valor decimal do diâmetro do pneu
+    *   Diâmetro - Valor inteiro do diâmetro do pneu
+    *   Largura - Valor inteiro do diâmetro do pneu
+    *   Altura - Valor inteiro do diâmetro do pneu
 
 Os números de série são únicos para cada peça. Quer isto dizer que, por exemplo, poderão existir vários motores com a mesma cilindrada e tipo de combustível, contudo estes terão sempre números de série diferentes. Isto faz com que a ordem pela qual se remove da lista de peças disponíveis seja relevante para o resultado final. **Deverá ser removida sempre a primeira peça referida no ficheiro de entrada.** Por outras palavras, implementando o modelo _first in, first out_.
 
@@ -75,14 +75,14 @@ No processo de produção, o carro vem representado pelos seguintes atributos:
     *   Modelo - string com no máximo 127 caracteres
 *   Jantes
     *   Número de Série - Conjunto de 20 caracteres alfanuméricos
-    *   Diâmetro - Valor decimal do diâmetro da jante
-    *   Largura - Valor decimal da largura da jante
+    *   Diâmetro - Valor inteiro do diâmetro da jante
+    *   Largura - Valor inteiro da largura da jante
     *   Cor - Enumerado os seguintes valores: Vermelho, Verde, Azul, Amarelo, Preto, Branco, Cinzento
 *   Pneus
     *   Número de Série - Conjunto de 20 caracteres alfanuméricos
-    *   Diâmetro - Valor decimal do diâmetro do pneu
-    *   Largura - Valor decimal do diâmetro do pneu
-    *   Altura - Valor decimal do diâmetro do pneu
+    *   Diâmetro - Valor inteiro do diâmetro do pneu
+    *   Largura - Valor inteiro do diâmetro do pneu
+    *   Altura - Valor inteiro do diâmetro do pneu
 *   Estado (é conveniente registar o estado do pedido): 
     *   PorAvaliar - por avaliar se pode ou não ser produzido o veículo;
     *   Produzido - veículo produzido, tendo sido retiradas as correspondentes peças do inventário; 
@@ -133,9 +133,9 @@ Exemplo do conteúdo de um ficheiro de inventário:
 ```
 Motor,52858123654997597522,2000,Diesel
 Chassis,10912468347292828298,Azul,Minivan
-Jantes,09573275234426356451,55.88,21.5,Platinum
+Jantes,09573275234426356451,16,205,Amarelo
 Motor,12312455,1600,Gasolina
-Pneus,00523442635645109573,55.88,22.5,10
+Pneus,00523442635645109573,17,215,50
 ```
 
 Não há garantia que as peças venham organizadas de alguma forma, ou seja, **não começam** por aparecer todos os motores, seguidos dos chassis, por exemplo. As peças poderão vir misturadas.
@@ -160,7 +160,7 @@ Os atributos de cada peça devem ser separados de vírgulas. Caso um atributo n�
 Exemplo de conteúdo de um ficheiro de pedidos:
 ```
 A422TCRE234VD3KJ349D;2000,;Vermelho,;17,200,Platinum;17,200,45;
-3KJ349DA422TCRE234VD;,diesel;Azul,Minivan;17,200,45;
+3KJ349DA422TCRE234VD;,diesel;Azul,Minivan;15,145,Vermelho;15,145,45;
 DA422TC3KJ349RE234VD;,;Vermelho,;,,;,,;
 ```
 onde cada linha se encontra dividida de acordo com:
@@ -278,7 +278,7 @@ DA422TC3KJ349RE234VD;,;Vermelho,;,,;,,;
 ```
 Pode resultar num carro produzido com a seguinte especificação:
 ```
-DA422TC3KJ349RE234VD;DALKSJDA12415152435,2000,Diesel;Vermelho,Coupe;17,200,Platinum;17,200,45;
+DA422TC3KJ349RE234VD;DALKSJDA12415152435,2000,Diesel;Vermelho,Coupe;17,200,Amarelo;17,200,45;
 ```
 
 ### 2.4.3 Carros Não Produzidos
